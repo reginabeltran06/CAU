@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import io from "socket.io-client";
 import "./Tarjetas.css";
 
-const socket = io("http://localhost:4000");
+const socket = io(process.env.REACT_APP_API_URL);
 
 const Tarjetas = () => {
   const [personal, setPersonal] = useState([]);
@@ -12,7 +12,8 @@ const Tarjetas = () => {
   useEffect(() => {
     const fetchPersonal = async () => {
       try {
-        const res = await fetch("/api/personal");
+        const res = await fetch(`${process.env.REACT_APP_API_URL}/api/personal`)
+
         const data = await res.json();
         setPersonal(data);
       } catch (err) {
