@@ -12,7 +12,7 @@ const Tarjetas = () => {
   useEffect(() => {
     const fetchPersonal = async () => {
       try {
-        const res = await fetch("http://localhost:4000/api/personal");
+        const res = await fetch("/api/personal");
         const data = await res.json();
         setPersonal(data);
       } catch (err) {
