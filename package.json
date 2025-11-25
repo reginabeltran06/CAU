@@ -1,0 +1,10 @@
+{
+  "name": "CAU-fullstack",
+  "private": true,
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "node server/server.js",
+    "client": "npm start --prefix client",
+    "install": "npm install --prefix server && npm install --prefix client"
+  }
+}
