@@ -1,6 +1,12 @@
 .header-container {
-  background-color: #002D72;
-  padding: 10px 20px;
+  position: sticky; /* Hace que el header se quede pegado al top */
+  top: 0;           /* Se pega al borde superior */
+  width: 100%;      /* Ocupa todo el ancho */
+  z-index: 1000;    /* Para que esté sobre otros elementos */
+  background-color: #002D72; /* Fondo blanco para que no se vea transparente */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
+    padding: 10px 20px;
+
 }
 
 .header-content {
