@@ -8,7 +8,7 @@ import personsRoutes from "./routes/persons.routes.js";
 import path from "path";
 import { fileURLToPath } from "url";
 
-// Configurar __dirname en ES Modules
+// __dirname en ES Modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -29,7 +29,8 @@ app.use("/api/persons", personsRoutes);
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
-  app.get("*", (req, res) => {
+  // Cambiado de "*" a "/*"
+  app.get("/*", (req, res) => {
     res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
   });
 }
