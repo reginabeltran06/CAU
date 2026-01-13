@@ -51,7 +51,7 @@ export default function PersonCard({ person, onClick }) {
 
         <div className="card-body">
           <h6 className="card-title">{person.nombre}</h6>
-          <small className="text-muted">{person.turno}</small>
+          <small className="text-muted">Turno: {person.turno}</small>
         </div>
       </div>
     </div>
