@@ -13,7 +13,8 @@ const personSchema = new mongoose.Schema({
   fechaIngreso: Date,
   casado: Boolean,
   hijos: [childSchema],
-  foto: String // luego la usarás
+  foto: String, 
+  turno: String
 });
 
 export default mongoose.model("Person", personSchema, "CAU");

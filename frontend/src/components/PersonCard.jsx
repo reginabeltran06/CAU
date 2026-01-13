@@ -12,7 +12,7 @@ export default function PersonCard({ person, onClick }) {
             className="card-img-top d-flex align-items-center justify-content-center"
             style={{
                 height: "180px",
-                backgroundColor: "#f0f0f0", // el color que quieras
+                backgroundColor: "#f0f0f0", 
             }}
       >
 
@@ -51,6 +51,7 @@ export default function PersonCard({ person, onClick }) {
 
         <div className="card-body">
           <h6 className="card-title">{person.nombre}</h6>
+          <small className="text-muted">{person.turno}</small>
         </div>
       </div>
     </div>

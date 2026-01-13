@@ -3,7 +3,6 @@ import React from "react";
 export default function PersonOffcanvas({ person, onClose }) {
   if (!person) return null;
 
-  // Función para formatear fechas
   const formatDate = (dateString) => {
     if (!dateString) return "";
     const date = new Date(dateString);
@@ -41,6 +40,7 @@ export default function PersonOffcanvas({ person, onClose }) {
           </div>
 
           {/* Texto alineado a la izquierda */}
+          <p><strong>Turno:</strong> {person.turno}</p>
           <p><strong>Correo:</strong> {person.correo}</p>
           <p><strong>Teléfono:</strong> {person.telefono}</p>
           <p><strong>Fecha nacimiento:</strong> {formatDate(person.fechaNacimiento)}</p>
