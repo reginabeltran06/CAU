@@ -46,9 +46,22 @@ export default function PersonOffcanvas({ person, onClose }) {
           <p><strong>Fecha nacimiento:</strong> {formatDate(person.fechaNacimiento)}</p>
           <p><strong>Fecha ingreso:</strong> {formatDate(person.fechaIngreso)}</p>
           <p><strong>Casado:</strong> {person.casado ? "Sí" : "No"}</p>
-          <p>
-            <strong>Hijos:</strong> {person.hijos.length} {person.hijos.length === 1 ? "hijo" : "hijos"}
-          </p>
+          <div className="mt-3">
+            <strong>Hijos:</strong>
+
+            {Array.isArray(person.hijos) && person.hijos.length > 0 ? (
+              <ul className="mt-2">
+                {person.hijos.map((hijo, index) => (
+                  <li key={index}>
+                    {hijo.nombre} ({hijo.edad} años)
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="mt-1">No aplica</p>
+            )}
+          </div>
+
         </div>
       </div>
     </>
