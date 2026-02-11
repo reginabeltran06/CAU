@@ -12,6 +12,9 @@
 .header-content {
   display: flex;
   align-items: center; /* Centra verticalmente */
+  justify-content: space-between;
+  flex: 1;
+
 }
 
 .header-logo {
@@ -37,4 +40,12 @@
 .card-title{
   font-weight: 600; /* 700 es negrita */
   font-size: 1.2rem;
+}
+.header-left {
+  display: flex;
+  align-items: center;
+}
+.header-search {
+  width: 250px !important;
+  flex: 0 0 auto;
 }
